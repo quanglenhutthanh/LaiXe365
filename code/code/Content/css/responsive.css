@@ -1,0 +1,262 @@
+body{
+	background-color:#f3f3f3;
+	
+	
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, input, form, fieldset, label, a:link, a:hover {padding: 0;margin: 0}
+#container{
+	width: auto;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+
+/*-----header-----*/
+#header{
+	background-color: #fff;
+	
+}
+#header h1 a{
+	display:block;
+	padding:30px;
+	color:red;
+	text-decoration:none;
+	border-bottom:1px solid #fff;
+}
+
+/*-----navigation--------*/
+.nav{
+	background-color:#EAEAEA;
+	min-width: 100%;
+}
+
+.nav ul{
+	list-style:none;
+}
+
+.nav ul li{
+	width:125px;
+	float:left;
+	position:relative;
+}
+
+.nav ul li a:link{
+	font-weight:bold;
+	text-align:center;
+	
+	background-color:#EAEAEA;
+	color:#04436f;
+	text-decoration:none;
+	padding:10px 15px;
+	display:block;
+
+}
+
+.nav ul li a:hover{
+	background-color:white;
+	color:black;
+}
+
+.nav li > ul{
+	display:none;
+}
+
+.nav li:hover > ul{
+	display:block;
+	position:absolute;
+}
+
+.nav li > ul{
+	display:none;
+}
+
+.nav li ul li > ul{
+	position:absolute;
+	left:126px;
+	top:0px;
+}
+
+
+
+
+.nav ul li a:hover{
+	background-color:white;
+	color:black;
+}
+
+
+
+/*
+#nav li:hover > ul{
+	display:block;
+	position:absolute;
+}
+*/
+@media screen and (max-width: 700px){
+	#header{
+		width:100%;
+	}
+	#footer{
+		width:100%;
+	}
+	.menu-trigger {
+		display: block;
+		color: #305782;
+		background-color: #d5dce4;
+		padding: 10px;
+		text-align: right;
+		font-size: 83%;
+		cursor: pointer;
+	}
+	.nav-inner{
+			width: 100%;
+			margin: 0 auto;
+	}
+	div.nav{
+		display: none;
+		
+	}
+	
+	div.nav-expanded {
+		display: block;
+	}
+	.nav li a{
+		text-align:left !important;
+	}
+	
+	.nav ul li{
+		float:none;
+		width:auto;
+	}
+	
+		.nav ul li > ul{
+			display:block;
+			padding-left:10px;
+		}
+		
+		.nav li ul li > ul{
+			position:relative!important;
+			left:0px !important;
+			top:0px;
+			display:block;
+		}
+		
+		.nav li:hover > ul{
+			display:block;
+			position:relative !important;
+		}
+	.side-trigger{
+		/* display: block;
+		color: #305782;
+		background-color: #d5dce4;
+		padding: 10px;
+		text-align: center;
+		font-size: 83%;
+		cursor: pointer; */
+
+	}
+	div.side-expanded {
+		/* display: block; */
+		display:none;
+	}
+	.side{
+	
+		display:none;
+		clear:both;
+		width:100% !important;
+		float:none;
+		margin-bottom:20px;
+	}
+	
+}
+/*-----content-----*/
+#body{
+	margin:0px;
+	padding:30px 0px 0px 0px;
+}
+
+#main{
+	width: 100%;
+	float:left;
+}
+
+#main-inner{
+	padding:20px;
+}
+
+.side{
+	display:none;
+}
+
+/*-----box item-----*/
+#box-item{
+	border-bottom:1px solid #BFCDF2;
+	padding:10px 0;
+}
+
+#box-item-image{
+	width: 100%;
+	float:left;
+	font-size:48px !important;
+}
+
+#box-item-content{
+	width: 100%;
+	padding-left:0px;
+	float:left;
+}
+
+#footer{
+	clear:left;
+	background-color: #b3b3b3;
+	
+}
+
+@media screen and (max-width: 480px) {
+	
+	#main{
+		width:auto;
+	}
+	#box-item{
+		border-bottom:1px solid #BFCDF2;
+	}
+
+	#box-item-image {
+		width: 100%;
+		float:left;
+		font-size:48px;
+	}
+
+	#box-item-content{
+		width: 100%;
+		padding-left:0;
+		float:left;
+	}
+	#box-item p{
+		width: 100%;
+		
+	}
+}
+
+
+
+
+.clear {
+	clear: both;
+}
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+/* @end */
+
