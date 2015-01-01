@@ -1,0 +1,29 @@
+﻿@model code.Models.User
+@{
+    ViewBag.Title = "Tạo mới trang";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <!-- Form Elements -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>Tạo mới User</h2>
+            </div>
+            <div class="panel-body">
+                @using (Html.BeginForm())
+                {
+                    <div class="form-group">
+                        <label>Tên</label>
+                        @Html.EditorFor(model => model.Username, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Tên</label>
+                        @Html.EditorFor(model => model.Password, new { @class = "form-control" })
+                    </div>
+                    <button type="submit" class="btn btn-default">Lưu</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -124,6 +124,8 @@
   <ItemGroup>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminPageManagerController.cs" />
+    <Compile Include="Controllers\AdminUserController.cs" />
+    <Compile Include="Controllers\admin_baseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -132,10 +134,22 @@
     <Compile Include="Migrations\201501011041048_Create_Database.Designer.cs">
       <DependentUpon>201501011041048_Create_Database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501011149224_Add_IsHomePage_column.cs" />
+    <Compile Include="Migrations\201501011149224_Add_IsHomePage_column.Designer.cs">
+      <DependentUpon>201501011149224_Add_IsHomePage_column.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501011545364_add_user_model.cs" />
+    <Compile Include="Migrations\201501011545364_add_user_model.Designer.cs">
+      <DependentUpon>201501011545364_add_user_model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\DataInitializer.cs" />
     <Compile Include="Models\Page.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\EditString.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -145,6 +159,7 @@
     <Content Include="Content\admin\css\custom.css" />
     <Content Include="Content\admin\css\dataTables.bootstrap.css" />
     <Content Include="Content\admin\css\font-awesome.css" />
+    <Content Include="Content\admin\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\admin\js\bootstrap.min.js" />
     <Content Include="Content\admin\js\custom.js" />
     <Content Include="Content\admin\js\dataTables.bootstrap.js" />
@@ -1109,6 +1124,39 @@
     <EmbeddedResource Include="Migrations\201501011041048_Create_Database.resx">
       <DependentUpon>201501011041048_Create_Database.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501011149224_Add_IsHomePage_column.resx">
+      <DependentUpon>201501011149224_Add_IsHomePage_column.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501011545364_add_user_model.resx">
+      <DependentUpon>201501011545364_add_user_model.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\admin\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\admin\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\admin\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\admin\font-awesome\fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AdminPageManager\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AdminPageManager\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\menu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\page.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AdminUser\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AdminUser\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Login.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

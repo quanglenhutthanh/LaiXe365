@@ -19,18 +19,7 @@
         <!-- begin navigation -->
         <!-- end navigation -->
     </div>
-    <span class="menu-trigger">MENU</span>
-    <div class="nav nav-expanded">
-        <div class="nav-inner">
-            <ul class="clearfix">
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Giới thiệu</a></li>
-                <li><a href="#">Liên hệ</a></li>
-                <li><a href="#">Tuyển dụng</a></li>
-
-            </ul>
-        </div>
-    </div>
+    @{Html.RenderAction("menu", "Home");}
     <div>
         @RenderBody()
     </div>

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<code.Models.Page>
+<span class="menu-trigger">MENU</span>
+<div class="nav nav-expanded">
+    <div class="nav-inner">
+        <ul class="clearfix">
+            @foreach(var item in Model)
+            {
+                <li><a href="~/Home/page/@item.ID">@item.Title</a></li>
+            }
+        </ul>
+    </div>
+</div>

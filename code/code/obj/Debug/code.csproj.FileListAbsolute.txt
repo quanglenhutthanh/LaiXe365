@@ -38,3 +38,5 @@ G:\Programming\current\LaiXe365\code\code\bin\EntityFramework.xml
 G:\Programming\current\LaiXe365\code\code\bin\EntityFramework.SqlServer.xml
 G:\Programming\current\LaiXe365\code\code\obj\Debug\code.Migrations.Create_Database.resources
 G:\Programming\current\LaiXe365\code\code\obj\Debug\code.csproj.GenerateResource.Cache
+G:\Programming\current\LaiXe365\code\code\obj\Debug\code.Migrations.Add_IsHomePage_column.resources
+G:\Programming\current\LaiXe365\code\code\obj\Debug\code.Migrations.add_user_model.resources

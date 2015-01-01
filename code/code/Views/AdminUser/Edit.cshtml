@@ -1,0 +1,47 @@
+﻿@model code.Models.UserViewModel
+@{
+    ViewBag.Title = "Thông tin quản trị viên";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- Form Elements -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>Thông tin quản trị</h2>
+                <span>@ViewBag.ThongBao</span>
+            </div>
+            <div class="panel-body">
+                @using (Html.BeginForm())
+                {
+                    <div class="form-group">
+                        <label>Tên đăng nhập</label>
+                        @Html.HiddenFor(model=>model.Id)
+                        @Html.TextBoxFor(model => model.Username, new { @class = "form-control", disabled = "disabled" })
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu</label>
+                        @Html.PasswordFor(model => model.Password , new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Xác nhận mật khẩu</label>
+                        @Html.PasswordFor(model => model.ConfirmedPass,new { @class = "form-control" })
+                    </div>
+                    <button type="submit" class="btn btn-default">Lưu</button>
+                    <script>
+                        function checkPass() {
+                            //Store the password field objects into variables ...
+                            var pass1 = document.getElementById('Password');
+                            var pass2 = document.getElementById('confirmpass');
+                            if (pass1.value == pass2.value) {
+                                alert("Vui lòng xách nhận chính xác mật khẩu");
+                                return false;
+                            }
+                        }
+                    </script>
+                }
+            </div>
+        </div>
+    </div>
+</div>

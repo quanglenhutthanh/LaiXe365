@@ -10,5 +10,6 @@ namespace code.Models
     {
         public DataContext() : base("DataConnectionString") { }
         public DbSet<Page> Pages { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

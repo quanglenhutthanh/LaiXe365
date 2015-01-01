@@ -1,5 +1,7 @@
-﻿using System;
+﻿using code.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -14,6 +16,7 @@ namespace code
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<DataContext>(new DataInitializer());
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
