@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/admin/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/admin/css/custom.css" rel="stylesheet" />
+    <link href="~/Content/admin/css/font-awesome.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="wrapper">
+        @Html.Partial("~/Views/Admin/_navtop.cshtml");
+        @Html.Partial("~/Views/Admin/_navside.cshtml")
+        <div id="page-wrapper">
+            @RenderBody()
+        </div>
+        
+    </div>
+    <script src="~/Content/admin/js/jquery-1.10.2.js"></script>
+    <script src="~/Content/admin/js/bootstrap.min.js"></script>
+    <script src="~/Content/admin/js/jquery.metisMenu.js"></script>
+    <script src="~/Content/admin/js/custom.js"></script>
+</body>
+</html>

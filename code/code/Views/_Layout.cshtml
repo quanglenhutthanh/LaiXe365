@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" media="screen and (max-width:900px)" />
+    <script src="~/Content/js/jquery-1.11.1.min.js"></script>
+    <script src="~/Content/js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial=scale=1.0">
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="header">
+        <h1>
+            <img src="/Content/images/banner.png" />
+        </h1>
+
+        <!-- begin navigation -->
+        <!-- end navigation -->
+    </div>
+    <span class="menu-trigger">MENU</span>
+    <div class="nav nav-expanded">
+        <div class="nav-inner">
+            <ul class="clearfix">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div id="footer">
+        <p>Footer</p>
+    </div>
+</body>
+</html>
