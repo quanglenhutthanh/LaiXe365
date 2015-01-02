@@ -7,18 +7,31 @@
     <link href="~/Content/css/responsive.css" rel="stylesheet" media="screen and (max-width:900px)" />
     <script src="~/Content/js/jquery-1.11.1.min.js"></script>
     <script src="~/Content/js/script.js"></script>
+    <script src="~/Content/bxslider/jquery.bxslider.min.js"></script>
+    <script src="~/Content/js/marquee.js"></script>
+    <link href="~/Content/bxslider/jquery.bxslider.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial=scale=1.0">
     <title>@ViewBag.Title</title>
 </head>
 <body>
     <div id="header">
-        <h1>
-            <img src="/Content/images/banner.png" />
-        </h1>
-
+        <div>
+            <img src="http://trungtamdongtien.com/upload/hinhanh/093306510875.png" />
+        </div>
+            
+        
+        <div id="marquee" style="height:40px;margin:0 auto;">
+            HÂN HẠNH ĐƯỢC ĐÓN TIẾP QUÝ KHÁCH ! - xin Cảm Ơn học viên đã Lựa chọn học lái xe tại Trung Tâm ! - CHÚC QUÝ KHÁCH NĂM MỚI AN KHAN THỊNH VƯỢNG
+        </div>
+        <script>
+            $(document).ready(function () {
+                jQuery('#marquee').marquee();
+            });
+        </script>
         <!-- begin navigation -->
         <!-- end navigation -->
     </div>
+   
     @{Html.RenderAction("menu", "Home");}
     <div id="container">
         @{Html.RenderAction("slider", "Home");}

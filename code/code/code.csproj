@@ -167,6 +167,12 @@
     <Content Include="Content\admin\js\jquery.dataTables.js" />
     <Content Include="Content\admin\js\jquery.metisMenu.js" />
     <Content Include="Content\admin\js\morris-0.4.3.min.css" />
+    <Content Include="Content\bxslider\images\bx_loader.gif" />
+    <Content Include="Content\bxslider\images\controls.png" />
+    <Content Include="Content\bxslider\images\left.gif" />
+    <Content Include="Content\bxslider\jquery.bxslider.css" />
+    <Content Include="Content\bxslider\jquery.bxslider.js" />
+    <Content Include="Content\bxslider\jquery.bxslider.min.js" />
     <Content Include="Content\ckeditor\adapters\jquery.js" />
     <Content Include="Content\ckeditor\build-config.js" />
     <Content Include="Content\ckeditor\ckeditor.js" />
@@ -1062,6 +1068,7 @@
     <Content Include="Content\css\style.css" />
     <Content Include="Content\images\banner.png" />
     <Content Include="Content\js\jquery-1.11.1.min.js" />
+    <Content Include="Content\js\marquee.js" />
     <Content Include="Content\js\script.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
