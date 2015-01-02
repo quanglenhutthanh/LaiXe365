@@ -20,11 +20,28 @@
         <!-- end navigation -->
     </div>
     @{Html.RenderAction("menu", "Home");}
-    <div>
-        @RenderBody()
+    <div id="container">
+        @{Html.RenderAction("slider", "Home");}
+        <div id="body" class="clearfix">
+            <div class="side side-expanded">
+                <div class="side-inner">
+                    <ul class="menu">
+                        <li class="heading">Hỗ trợ trực tuyến</li>
+                    </ul>
+                    <ul class="menu">
+                        <li class="heading">Hỗ trợ trực tuyến</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main">
+                <div id="main-inner">
+                    @RenderBody()
+                </div>
+
+            </div>
+
+        </div>
     </div>
-    <div id="footer">
-        <p>Footer</p>
-    </div>
+    @{Html.RenderAction("footer", "Home");}
 </body>
 </html>

@@ -42,5 +42,17 @@ namespace code.Controllers
         {
             return PartialView(db.Pages.ToList());
         }
+
+        [ChildActionOnly]
+        public ActionResult slider()
+        {
+            return PartialView();
+        }
+
+        [ChildActionOnly]
+        public ActionResult footer()
+        {
+            return PartialView();
+        }
     }
 }
