@@ -2,17 +2,18 @@
     $(document).ready(function () {
         jQuery('.bxslider').bxSlider({
             auto: true,
-            autoControls: false,
+            default:700,
+            mode: 'fade',
             pager: false
         });
     });
 </script>
-
-<div style="height:250px;width:1080px;">
+@{List<string> listImage = ViewBag.FileNames as List<string>;}
+<div style="height:250px;width:100%;">
     <ul class="bxslider">
-        <li><img src="http://trungtamdongtien.com/upload/hinhanh/258991933036353_1000x300.png" width="1080" height="250"/></li>
-        <li><img src="http://trungtamdongtien.com/upload/hinhanh/892352339377753_1000x300.jpg" width="1080" height="250" /></li>
-        <li><img src="http://trungtamdongtien.com/upload/hinhanh/4522498930001030_1000x300.jpg" width="1080" height="250" /></li>
-        <li><img src="http://trungtamdongtien.com/upload/hinhanh/9205939803367650_1000x300.png" width="1080" height="250" /></li>
+        @foreach(string name in listImage)
+        {
+            <li><img src="~/Content/images/slider/@name" width="1080" height="250"/></li>
+        }
     </ul>
 </div>

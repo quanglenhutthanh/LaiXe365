@@ -1,6 +1,7 @@
 ﻿using code.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -46,6 +47,22 @@ namespace code.Controllers
         [ChildActionOnly]
         public ActionResult slider()
         {
+            try
+            {
+                string slideImagePath = Server.MapPath("~/Content/images/slider");
+                DirectoryInfo di = new DirectoryInfo(slideImagePath);
+                FileInfo[] files = di.GetFiles();
+                List<string> imgNames = new List<string>();
+                foreach (FileInfo file in files)
+                {
+                    imgNames.Add(file.Name);
+                }
+                ViewBag.FileNames = imgNames;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
             return PartialView();
         }
 
