@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="~/Content/css/style.css" rel="stylesheet" />
-    <link href="~/Content/css/responsive.css" rel="stylesheet" media="screen and (max-width:900px)" />
+    @*<link href="~/Content/css/responsive.css" rel="stylesheet" media="screen and (max-width:900px)" />*@
     <script src="~/Content/js/jquery-1.11.1.min.js"></script>
     <script src="~/Content/js/script.js"></script>
     <script src="~/Content/bxslider/jquery.bxslider.min.js"></script>
@@ -14,73 +14,20 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div id="header">
-        @{Html.RenderAction("header", "Home");}
-        @{Html.RenderAction("marquee", "Home");}
-        <!-- begin navigation -->
-        <!-- end navigation -->
-    </div>
-   
-    @{Html.RenderAction("menu", "Home");}
-  
     <div id="container">
-        
+        <div id="header">
+            @{Html.RenderAction("header", "Home");}
+            @{Html.RenderAction("marquee", "Home");}
+            <!-- begin navigation -->
+            <!-- end navigation -->
+        </div>
+
+        @{Html.RenderAction("menu", "Home");}
         @{Html.RenderAction("slider", "Home");}
-        <div id="body" class="clearfix">
+        <div id="" class="clearfix">
             <div class="side side-expanded">
                 <div class="side-inner">
-                    <ul class="menu">
-                        <li class="heading">Hỗ trợ trực tuyến</li>
-                        <li>
-                            <div style="border: 1px solid #7bb5ec; margin-bottom: 5px; padding: 7px; border-radius: 5px;"> 
-                                <table style="width: 100%;font-size:12px;" cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                        <tr>
-                                            <td align="left" valign="middle" style="width: 100px;">M01 MR.B <br /> 08. 6684 6998</td>
-                                            <td align="center" valign="middle"><a href="ymsgr:sendim?huynh.trungtamdongtien"><img alt="M01 - MR.HUYNH  08. 6684 6998" src="http://trungtamdongtien.com/images/yahoo.png"></a></td>
-                                            <td align="center" valign="middle"><a href="skype:?chat"><img src="http://trungtamdongtien.com/images/skype.png" alt="M01 - MR.HUYNH  08. 6684 6998"></a></td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            
-                        </li>
-                        <li>
-                            <div style="border: 1px solid #7bb5ec; margin-bottom: 5px; padding: 7px; border-radius: 5px;">
-                                <table style="width: 100%;font-size:12px;" cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                        <tr>
-                                            <td align="left" valign="middle" style="width: 100px;">M01 MR.A <br /> 08. 6684 6998</td>
-                                            <td align="center" valign="middle"><a href="ymsgr:sendim?huynh.trungtamdongtien"><img alt="M01 - MR.HUYNH  08. 6684 6998" src="http://trungtamdongtien.com/images/yahoo.png"></a></td>
-                                            <td align="center" valign="middle"><a href="skype:?chat"><img src="http://trungtamdongtien.com/images/skype.png" alt="M01 - MR.HUYNH  08. 6684 6998"></a></td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </li>
-                        <li>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <a href="http://facebook.com.vn" target="_blank" title="Facebook"><img src="http://trungtamdongtien.com/upload/hinhanh/56357508.png" width="30" height="30" alt="Facebook"></a>
-                                    </td>
-                                    <td>
-                                        <a href="https://twitter.com/" target="_blank" title="Twitter"><img src="http://trungtamdongtien.com/upload/hinhanh/14368396.png" width="30" height="30" alt="Twitter"></a>
-                                    </td>
-                                    <td>
-                                        <a href="http://google.com.vn" target="_blank" title="Google"><img src="http://trungtamdongtien.com/upload/hinhanh/92146985.png" width="30" height="30" alt="Google"></a>
-                                    </td>
-                                    <td>
-                                        <a href="http://youtube.com" target="_blank" title="Youtube"><img src="http://trungtamdongtien.com/upload/hinhanh/31549460.png" width="30" height="30" alt="Youtube"></a>
-                                    </td>
-                                </tr>
-                            </table>
-                           
-                        </li>
-                    </ul>
+                    @{Html.RenderAction("moduleContact", "Home");}
                     <br />
                     <ul class="menu">
                         <li class="heading">Học lái xe</li>
@@ -109,7 +56,8 @@
             </div>
 
         </div>
+        @{Html.RenderAction("footer", "Home");}
     </div>
-    @{Html.RenderAction("footer", "Home");}
+    
 </body>
 </html>

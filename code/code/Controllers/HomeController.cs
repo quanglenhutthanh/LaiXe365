@@ -26,7 +26,22 @@ namespace code.Controllers
             
             return View();
         }
-
+        public ActionResult PageByTitle(string title)
+        {
+            //string[] aliasArray = title.Split((".").ToCharArray());
+            //if(aliasArray.Count() > 1)
+            //{
+            //    string alias = aliasArray[0];
+                var pages = db.Pages.Where(p => p.Alias.Equals(title)).ToList();
+                if (pages.Count > 0)
+                {
+                    var page = pages.First();
+                    ViewBag.Content = page.Content;
+                }
+            //}
+           
+            return View();
+        }
         public ActionResult page(int id)
         {
             var page = db.Pages.SingleOrDefault(p => p.ID == id);
@@ -57,7 +72,13 @@ namespace code.Controllers
         [ChildActionOnly]
         public ActionResult menu()
         {
-            return PartialView(db.Pages.ToList());
+            return PartialView(db.Pages.OrderBy(p=>p.PageOrder).ToList());
+        }
+
+        [ChildActionOnly]
+        public ActionResult moduleContact()
+        {
+            return PartialView(db.Contacts.ToList());
         }
 
         [ChildActionOnly]

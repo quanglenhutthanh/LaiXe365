@@ -36,5 +36,10 @@ namespace code.Controllers
             Utilities.File.WriteFile(footerFilePath, txtFooter);
             return View();
         }
+
+        public ActionResult ImageManager() 
+        {
+            return View();
+        }
     }
 }

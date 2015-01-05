@@ -1,0 +1,30 @@
+﻿@model IEnumerable<code.Models.Contact>
+<ul class="menu">
+    <li class="heading">Hỗ trợ trực tuyến</li>
+    @foreach (var item in Model)
+    {
+        <li>
+            <div style="border: 1px solid #7bb5ec; margin-bottom: 5px; padding: 7px; border-radius: 5px;">
+                <table style="width: 100%;font-size:12px;" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td align="left" valign="middle" style="width: 100px;">@item.ContactName <br /> @item.PhoneNumber</td>
+                            <td align="center" valign="middle">
+                                <a href="ymsgr:sendim?@item.Yahoo">
+                                    <img alt="@item.ContactName" src="http://trungtamdongtien.com/images/yahoo.png">
+                                </a>
+                            </td>
+                            <td align="center" valign="middle">
+                                <a href="skype:@item.Skype?chat">
+                                    <img src="http://trungtamdongtien.com/images/skype.png" alt="@item.ContactName">
+                                </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </li>
+    }
+</ul>

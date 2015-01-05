@@ -28,6 +28,7 @@ namespace code.Controllers
         {
             if (ModelState.IsValid)
             {
+                page.Alias = Utilities.EditString.BoDauTrenChuoi(page.Title);
                 db.Pages.Add(page);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -51,6 +52,7 @@ namespace code.Controllers
         {
             if(ModelState.IsValid)
             {
+                page.Alias = Utilities.EditString.BoDauTrenChuoi(page.Title);
                 db.Entry(page).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

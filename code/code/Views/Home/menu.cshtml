@@ -5,7 +5,8 @@
         <ul class="clearfix">
             @foreach(var item in Model)
             {
-                <li><a href="~/Home/page/@item.ID">@item.Title</a></li>
+                string alias = item.Alias + ".html";
+                <li><a href="~/@alias">@item.Title</a></li>
             }
         </ul>
     </div>

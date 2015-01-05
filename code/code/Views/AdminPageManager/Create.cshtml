@@ -27,6 +27,10 @@
                         </script>
                     </div>
                     <div class="form-group">
+                        <label>Thứ tự</label>
+                        @Html.EditorFor(model => model.PageOrder, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
                         <label>Đặt làm trang chủ</label>
                         @Html.CheckBoxFor(model => model.IsHomePage)
                     </div>

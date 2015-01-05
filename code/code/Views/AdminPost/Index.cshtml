@@ -1,0 +1,50 @@
+﻿@model IEnumerable<code.Models.Post>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- Form Elements -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>Danh sách trang - <a href="~/adminpagemanager/create" class="btn btn-success btn-lg">Thêm mới</a></h2>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div>
+                <table class="table table-striped table-bordered table-hover" id="test">
+                    <thead>
+                        <tr>
+                            <th>Tiêu đề</th>
+                            <th>Ngày tạo</th>
+                            <th>Người tạo</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(Modelitem => item.Title)</td>
+                                <td>@Html.DisplayFor(Modelitem => item.CreatedDate)</td>
+                                <td>@Html.DisplayFor(Modelitem => item.Author)</td>
+                                <td>
+                                    <a href="~/adminpagemanager/edit/@item.ID" class="btn btn-primary">Sửa</a>
+                                    <a href="~/adminpagemanager/delete/@item.ID" onclick="return confirm('Bạn có chắc muốn xóa?')" class="btn btn-danger">Xóa</a>
+
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

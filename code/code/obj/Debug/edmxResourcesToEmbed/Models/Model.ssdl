@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="codeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="tru5a196_codeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="__MigrationHistory">
     <Key>
       <PropertyRef Name="MigrationId" />
@@ -18,6 +18,8 @@
     <Property Name="Title" Type="nvarchar(max)" />
     <Property Name="Content" Type="nvarchar(max)" />
     <Property Name="IsHomePage" Type="bit" Nullable="false" />
+    <Property Name="Alias" Type="nvarchar(max)" />
+    <Property Name="PageOrder" Type="int" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
@@ -27,9 +29,36 @@
     <Property Name="Username" Type="nvarchar(max)" />
     <Property Name="Password" Type="nvarchar(max)" />
   </EntityType>
-  <EntityContainer Name="codeDBModelStoreContainer">
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Yahoo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Skype" Type="nvarchar" MaxLength="100" />
+    <Property Name="PhoneNumber" Type="nchar" MaxLength="11" />
+    <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Posts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Alias" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="PostContent" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Type" Type="tinyint" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Author" Type="nvarchar" MaxLength="100" />
+    <Property Name="PhoneNumber" Type="nchar" MaxLength="11" />
+  </EntityType>
+  <EntityContainer Name="tru5a196_codeDBModelStoreContainer">
     <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Pages" EntityType="Self.Pages" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="tru5a196_codeDB" store:Type="Tables" />
+    <EntitySet Name="Posts" EntityType="Self.Posts" Schema="tru5a196_codeDB" store:Type="Tables" />
   </EntityContainer>
 </Schema>

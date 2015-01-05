@@ -18,5 +18,7 @@ namespace code.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public bool IsHomePage { get; set; }
+        public string Alias { get; set; }
+        public Nullable<int> PageOrder { get; set; }
     }
 }

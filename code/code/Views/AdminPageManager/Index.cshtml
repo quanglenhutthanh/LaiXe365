@@ -19,6 +19,7 @@
                         <tr>
                             <th>Tên</th>
                             <th>Trang chủ</th>
+                            <th>Thứ tự</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -28,6 +29,7 @@
                             <tr>
                                 <td>@Html.DisplayFor(Modelitem => item.Title)</td>
                                 <td>@Html.CheckBoxFor(Modelitem => item.IsHomePage)</td>
+                                <td>@Html.DisplayFor(Modelitem => item.PageOrder)</td>
                                 <td>
                                     <a href="~/adminpagemanager/edit/@item.ID" class="btn btn-primary">Sửa</a>
                                     <a href="~/adminpagemanager/delete/@item.ID" onclick="return confirm('Bạn có chắc muốn xóa?')" class="btn btn-danger">Xóa</a>

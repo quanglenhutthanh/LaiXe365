@@ -1,0 +1,46 @@
+﻿@model IEnumerable<code.Models.Contact>
+@{
+    ViewBag.Title = "Danh sách hỗ trợ trực tuyến";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- Form Elements -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>Hỗ trợ trực tuyến - <a href="~/admincontact/create" class="btn btn-success btn-lg">Thêm mới</a></h2>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div>
+                <table class="table table-striped table-bordered table-hover" id="test">
+                    <thead>
+                        <tr>
+                            <th>Tên</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(Modelitem => item.ContactName)</td>
+                                <td>
+                                    <a href="~/admincontact/edit/@item.ID" class="btn btn-primary">Sửa</a>
+                                    <a href="~/admincontact/delete/@item.ID" onclick="return confirm('Bạn có chắc muốn xóa?')" class="btn btn-danger">Xóa</a>
+
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+

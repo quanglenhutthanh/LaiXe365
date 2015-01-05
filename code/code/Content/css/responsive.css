@@ -15,7 +15,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, input, form, fieldset, labe
 /*-----header-----*/
 #header{
 	background-color: #fff;
-	
+	width:100%;
 }
 #header h1 a{
 	display:block;
@@ -177,7 +177,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, input, form, fieldset, labe
 }
 
 #main{
-	width: 100%;
+	width: 75%;
 	float:left;
 }
 
@@ -186,7 +186,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, input, form, fieldset, labe
 }
 
 .side{
-	display:none;
+	width: 25%;
 }
 
 /*-----box item-----*/
