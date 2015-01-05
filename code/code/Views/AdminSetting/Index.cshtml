@@ -5,40 +5,45 @@
 <script src="~/Content/ckeditor/ckeditor.js"></script>
 <script src="~/Content/ckfinder/ckfinder.js"></script>
 <div class="row">
-    <div class="col-md-12">
-        <!-- Form Elements -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>Text Header</h2>
+    @using (Html.BeginForm())
+    {
+        <div class="col-md-12">
+            <!-- Form Elements -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>Text Header</h2>
+                </div>
+            </div>
+            <div class="panel-body">
+                <textarea id="txtTextHeader" name="txtTextHeader">@ViewBag.Header</textarea>
+                <script>
+                    var ckeditor = CKEDITOR.replace("txtTextHeader");
+                </script>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>Marqueee (chữ chạy)</h2>
+                </div>
+            </div>
+            <div class="panel-body">
+                <textarea id="txtMarquee" name="txtMarquee">@ViewBag.Marquee</textarea>
+                <script>
+                    var ckeditor1 = CKEDITOR.replace("txtMarquee");
+                </script>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>Text Footer</h2>
+                </div>
+            </div>
+            <div class="panel-body">
+                <textarea id="txtTextFooter" name="txtTextFooter">@ViewBag.Footer</textarea>
+                <script>
+                    var ckeditor2 = CKEDITOR.replace("txtTextFooter");
+                </script>
             </div>
         </div>
-        <div class="panel-body">
-            <textarea id="txtTextHeader" name="txtTextHeader"></textarea>
-            <script>
-                var ckeditor = CKEDITOR.replace("txtTextHeader");
-            </script>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>Marqueee (chữ chạy)</h2>
-            </div>
-        </div>
-        <div class="panel-body">
-            <textarea id="txtMarquee" name="txtMarquee"></textarea>
-            <script>
-                var ckeditor1 = CKEDITOR.replace("txtMarquee");
-            </script>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2>Text Footer</h2>
-            </div>
-        </div>
-        <div class="panel-body">
-            <textarea id="txtTextFooter" name="txtTextFooter"></textarea>
-            <script>
-                var ckeditor2 = CKEDITOR.replace("txtTextFooter");
-            </script>
-        </div>
-    </div>
+        <button type="submit" class="btn btn-default">Lưu</button>
+    }
+
 </div>

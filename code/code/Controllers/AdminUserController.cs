@@ -7,11 +7,11 @@ using System.Web;
 using System.Web.Mvc;
 namespace code.Controllers
 {
-    public class AdminUserController : admin_baseController
+    public class AdminUserController : Controller
     {
         //
         // GET: /AdminUser/
-        DataContext db = new DataContext();
+        DBEntities db = new DBEntities();
         public ActionResult Index()
         {
             return View();

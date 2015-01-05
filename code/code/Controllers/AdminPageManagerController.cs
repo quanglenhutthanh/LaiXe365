@@ -8,11 +8,11 @@ using System.Web.Mvc;
 
 namespace code.Controllers
 {
-    public class AdminPageManagerController : admin_baseController
+    public class AdminPageManagerController : Controller
     {
         //
         // GET: /AdminPageManager/
-        DataContext db = new DataContext();
+        DBEntities db = new DBEntities();
         public ActionResult Index()
         {
             return View(db.Pages.ToList());

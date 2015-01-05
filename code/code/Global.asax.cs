@@ -16,7 +16,6 @@ namespace code
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<DataContext>(new DataInitializer());
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

@@ -1,0 +1,8 @@
+﻿<div id="marquee" style="height:40px;margin:0 auto;padding:0px; width:100%;">
+    @Html.Raw(ViewBag.Text)
+</div>
+<script>
+    $(document).ready(function () {
+        jQuery('#marquee').marquee();
+    });
+</script>

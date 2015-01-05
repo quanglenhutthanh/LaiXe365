@@ -13,8 +13,28 @@ namespace code.Controllers
 
         public ActionResult Index()
         {
+            string headerFilePath = Server.MapPath("~/Files/header.txt");
+            string footerFilePath = Server.MapPath("~/Files/footer.txt");
+            string marqueeFilePath = Server.MapPath("~/Files/marquee.txt");
+            ViewBag.Header = Utilities.File.ReadFile(headerFilePath);
+            ViewBag.Footer = Utilities.File.ReadFile(footerFilePath);
+            ViewBag.Marquee = Utilities.File.ReadFile(marqueeFilePath);
             return View();
         }
-
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Index(FormCollection collection)
+        {
+            string txtHeader = collection["txtTextHeader"];
+            string txtFooter = collection["txtTextFooter"];
+            string marquee = collection["txtMarquee"];
+            string headerFilePath = Server.MapPath("~/Files/header.txt");
+            string footerFilePath = Server.MapPath("~/Files/footer.txt");
+            string marqueeFilePath = Server.MapPath("~/Files/marquee.txt");
+            Utilities.File.WriteFile(headerFilePath, txtHeader);
+            Utilities.File.WriteFile(marqueeFilePath, marquee);
+            Utilities.File.WriteFile(footerFilePath, txtFooter);
+            return View();
+        }
     }
 }

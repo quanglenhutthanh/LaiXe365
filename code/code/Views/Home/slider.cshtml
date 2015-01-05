@@ -2,18 +2,18 @@
     $(document).ready(function () {
         jQuery('.bxslider').bxSlider({
             auto: true,
-            default:700,
+            default: 700,
             mode: 'fade',
             pager: false
         });
     });
 </script>
 @{List<string> listImage = ViewBag.FileNames as List<string>;}
-<div style="height:250px;width:100%;">
+<div style="height:210px;width:99%;margin:0 auto;">
     <ul class="bxslider">
         @foreach(string name in listImage)
         {
-            <li><img src="~/Content/images/slider/@name" width="1080" height="250"/></li>
+            <li><img src="~/Content/images/slider/@name" width="1080" height="200"/></li>
         }
     </ul>
 </div>

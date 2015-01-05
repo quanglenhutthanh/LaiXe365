@@ -11,7 +11,7 @@ namespace code.Controllers
     {
         //
         // GET: /Admin/
-        DataContext db = new DataContext();
+        DBEntities db = new DBEntities();
         public ActionResult Index()
         {
             return RedirectToAction("Index", "AdminPageManager");

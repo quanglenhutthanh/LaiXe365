@@ -12,7 +12,8 @@ namespace code.Controllers
     {
         //
         // GET: /Home/
-        DataContext db = new DataContext();
+        DBEntities db = new DBEntities();
+        //DataContext db = new DataContext();
         public ActionResult Index()
         {
             
@@ -36,6 +37,21 @@ namespace code.Controllers
             ViewBag.Title = page.Title;
             ViewBag.Content = page.Content;
             return View();
+        }
+        [ChildActionOnly]
+        public ActionResult header()
+        {
+            string headerFilePath = Server.MapPath("~/Files/header.txt");
+            ViewBag.Text = Utilities.File.ReadFile(headerFilePath);
+            return PartialView();
+        }
+
+        [ChildActionOnly]
+        public ActionResult marquee()
+        {
+            string marqueeFilePath = Server.MapPath("~/Files/marquee.txt");
+            ViewBag.Text = Utilities.File.ReadFile(marqueeFilePath);
+            return PartialView();
         }
 
         [ChildActionOnly]
@@ -69,6 +85,8 @@ namespace code.Controllers
         [ChildActionOnly]
         public ActionResult footer()
         {
+            string footerFilePath = Server.MapPath("~/Files/footer.txt");
+            ViewBag.Text = Utilities.File.ReadFile(footerFilePath);
             return PartialView();
         }
     }

@@ -8,11 +8,11 @@ namespace code.Models
 {
     public class DataContext:DbContext
     {
-        public DataContext() : base("DataConnectionString") 
-        {
-            Database.SetInitializer<DataContext>(new DataInitializer());
-        }
-        public DbSet<Page> Pages { get; set; }
+        // public DataContext()
+        //    : base("DataConnectionString")
+        //{
+        //}
+       public DbSet<Page> Pages { get; set; }
         public DbSet<User> Users { get; set; }
     }
 }
