@@ -1,0 +1,25 @@
+﻿@model IEnumerable<code.Models.Post>
+@{
+    ViewBag.Title = "Comment";
+    Layout = "~/Views/_Layout.cshtml";
+}
+<link href="~/Content/css/PagedList.css" rel="stylesheet" />
+@using PagedList;
+@using PagedList.Mvc;
+
+@{PagedList<code.Models.Post> posts = ViewBag.onePageOfSanpham;}
+@foreach(var item in posts)
+{
+    <div id="box-item" class="clearfix">
+    <div id="box-item-image">
+        <img src="User_icon.png" alt="no image" />
+    </div>
+    <div id="box-item-content">
+        <h2>@item.Title</h2>
+        <p>
+            @Html.Raw(item.PostContent)
+        </p>
+    </div>
+</div>
+}
+@Html.PagedListPager((IPagedList)ViewBag.onePageOfSanPham, page => Url.Action("Comment", new { page}), PagedListRenderOptions.OnlyShowFivePagesAtATime)

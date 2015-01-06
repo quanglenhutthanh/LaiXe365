@@ -1,7 +1,7 @@
 ﻿@model code.Models.Post
 <script src="~/Content/ckeditor/ckeditor.js"></script>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("comment", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <table cellpadding="0" cellspacing="5" border="0" class="tablelienhe">
         <tbody>
@@ -24,11 +24,20 @@
             </tr>
             <tr>
                
-                <td>@Html.TextAreaFor(model => model.PostContent, new { @class = "input", id = "noidung", placeholder = "Nội dung" })</td>
+                <td>
+                    
+                    @Html.TextAreaFor(model => model.PostContent, new { @class = "input", id = "noidung", placeholder = "Nội dung" })
+                </td>
             </tr>
             <tr>
                 <td>
-                    <input class="button" type="button" value="Gửi" id="send" style="padding: 5px;">
+                    @ViewBag.CaptchaError
+                    @CaptchaMvc.HtmlHelpers.CaptchaHelper.Captcha(Html, "", "Nhập mã xác nhận", 5)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="button" type="submit" value="Gửi" id="send" style="padding: 5px;">
                     <input class="button" type="reset" value="Làm lại" style="padding: 5px;">
                 </td>
             </tr>

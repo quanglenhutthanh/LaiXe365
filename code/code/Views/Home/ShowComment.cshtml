@@ -1,0 +1,20 @@
+﻿@model IEnumerable<code.Models.Post>
+
+@foreach (var item in Model)
+{
+    <div class="comment-box-show">
+        <div class="comment-box-img">
+            <img alt="" src="~/Content/images/baiviet/@item.Image">
+        </div>
+        <div class="comment-box-content">
+            <div class="title"><a href=#>@item.Title</a></div>
+            <div style="font-size:12px;">
+                <b>Người gửi:</b> @item.Author <br />
+                <b>Email:</b> @item.Mail <br />
+                @{string date = String.Format("{0:dd/MM/yyyy}", @item.CreatedDate);}
+                <b>Ngày gửi:</b> @date
+            </div>
+            
+        </div>
+    </div>
+}

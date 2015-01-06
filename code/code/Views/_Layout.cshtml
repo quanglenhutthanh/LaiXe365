@@ -58,49 +58,13 @@
         </div>
         <div class="comment-box clearfix">
             <div class="comment-box-heading">
-                <label>Ý kiến - Đánh giá - Góp ý</label>
+                <label><a href="~/y-kien-khach-hang">Ý kiến - Đánh giá - Góp ý</a></label>
             </div>
             
             <div class="comment-box-form">
                @{Html.RenderAction("comment", "Home");}
             </div>
-            <div class="comment-box-show">
-                <div class="comment-box-img">
-                    <img alt="" src="http://trungtamdongtien.com/upload/hinhanh/76497795.jpg">
-                </div>
-                <div class="comment-box-content">
-                    <div class="title"><a href=#>Ý kiến khách hàng</a></div>
-                </div>
-                
-            </div>
-            
-            <div class="comment-box-show">
-                <div class="comment-box-img">
-                    <img alt="" src="http://trungtamdongtien.com/upload/hinhanh/76497795.jpg">
-                </div>
-                <div class="comment-box-content">
-                    <div class="title"><a href=#>Ý kiến khách hàng</a></div>
-                </div>
-                
-            </div>
-            <div class="comment-box-show">
-                <div class="comment-box-img">
-                    <img alt="" src="http://trungtamdongtien.com/upload/hinhanh/76497795.jpg">
-                </div>
-                <div class="comment-box-content">
-                    <div class="title"><a href=#>Ý kiến khách hàng</a></div>
-                </div>
-
-            </div>
-            <div class="comment-box-show">
-                <div class="comment-box-img">
-                    <img alt="" src="http://trungtamdongtien.com/upload/hinhanh/76497795.jpg">
-                </div>
-                <div class="comment-box-content">
-                    <div class="title"><a href=#>Ý kiến khách hàng</a></div>
-                </div>
-
-            </div>
+            @{Html.RenderAction("ShowComment", "Home");}
         </div>
         @{Html.RenderAction("footer", "Home");}
     </div>

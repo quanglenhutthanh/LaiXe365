@@ -12,9 +12,9 @@ namespace code.Controllers
         //
         // GET: /AdminPost/
         DBEntities db = new DBEntities();
-        public ActionResult Index()
+        public ActionResult Index(int type)
         {
-            return View(db.Posts.ToList());
+            return View(db.Posts.Where(p=>p.Type==2).ToList());
         }
 
     }

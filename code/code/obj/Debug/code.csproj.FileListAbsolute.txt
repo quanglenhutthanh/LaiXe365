@@ -40,3 +40,10 @@ G:\Programming\current\LaiXe365\code\code\obj\Debug\code.Migrations.Create_Datab
 G:\Programming\current\LaiXe365\code\code\obj\Debug\code.csproj.GenerateResource.Cache
 G:\Programming\current\LaiXe365\code\code\obj\Debug\code.Migrations.Add_IsHomePage_column.resources
 G:\Programming\current\LaiXe365\code\code\obj\Debug\code.Migrations.add_user_model.resources
+G:\Programming\current\LaiXe365\code\code\bin\CaptchaMvc.dll
+G:\Programming\current\LaiXe365\code\code\bin\CaptchaMvc.pdb
+G:\Programming\current\LaiXe365\code\code\bin\CaptchaMvc.xml
+G:\Programming\current\LaiXe365\code\code\bin\PagedList.dll
+G:\Programming\current\LaiXe365\code\code\bin\PagedList.Mvc.dll
+G:\Programming\current\LaiXe365\code\code\bin\PagedList.xml
+G:\Programming\current\LaiXe365\code\code\bin\PagedList.Mvc.xml

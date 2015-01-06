@@ -5,7 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using CaptchaMvc;
+using CaptchaMvc.Attributes;
+using CaptchaMvc.HtmlHelpers;
+using CaptchaMvc.Models;
 namespace code.Controllers
 {
     public class HomeController : Controller
@@ -107,6 +110,58 @@ namespace code.Controllers
         {
             return PartialView();
         }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult comment(Post post, HttpPostedFileBase file)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    if (this.IsCaptchaValid("Captcha is not valid"))
+                    {
+                        string imageName = "";
+                        if (file != null && file.ContentLength > 0)
+                        {
+                            int size = file.ContentLength;
+                            if (size >= 300000)
+                            {
+                                ViewBag.CaptchaError = "Kích thước file quá lớn";
+                                return PartialView();
+                            }
+                            var fileName = Path.GetFileName(file.FileName);
+                            var path = Path.Combine(Server.MapPath("~/Content/images/baiviet"), fileName);
+                            file.SaveAs(path);
+                            imageName = fileName.ToString();
+                        }
+                        post.CreatedDate = System.DateTime.Now;
+                        post.PostView = 1;
+                        post.Type = 2;
+                        db.Posts.Add(post);
+                        db.SaveChanges();
+                        
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        ViewBag.CaptchaError = "Mã xác nhận không đúng";
+                    }
+                }
+            }
+            catch
+            {
+                ViewBag.CaptchaError = "Mã xác nhận không đúng";
+            }
+            return PartialView();
+        }
+
+        [ChildActionOnly]
+        public ActionResult ShowComment()
+        {
+            return PartialView(db.Posts.Where(p=>p.Type==2).OrderByDescending(p=>p.ID).Take(4).ToList());
+        }
+
         [ChildActionOnly]
         public ActionResult footer()
         {

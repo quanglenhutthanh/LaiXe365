@@ -17,6 +17,11 @@ namespace code
             "{title}.html/",
                 new { controller = "Home", action = "PageByTitle" }
             );
+            routes.MapRoute(
+           "post type 2",
+           "y-kien-khach-hang/",
+               new { controller = "post", action = "comment" }
+           );
              routes.MapRoute(
             "admin",
             "admin/",
