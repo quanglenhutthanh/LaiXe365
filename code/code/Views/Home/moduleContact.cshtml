@@ -5,10 +5,10 @@
     {
         <li>
             <div style="border: 1px solid #7bb5ec; margin-bottom: 5px; padding: 7px; border-radius: 5px;">
-                <table style="width: 100%;font-size:12px;" cellspacing="0" cellpadding="0" border="0">
+                <table style="width: 100%;font-size:14px;" cellspacing="0" cellpadding="0" border="0">
                     <tbody>
                         <tr>
-                            <td align="left" valign="middle" style="width: 100px;">@item.ContactName <br /> @item.PhoneNumber</td>
+                            <td align="left" valign="middle" style="width: 100px;"><b>@item.ContactName</b> <br /> @item.PhoneNumber</td>
                             <td align="center" valign="middle">
                                 <a href="ymsgr:sendim?@item.Yahoo">
                                     <img alt="@item.ContactName" src="http://trungtamdongtien.com/images/yahoo.png">
@@ -16,7 +16,7 @@
                             </td>
                             <td align="center" valign="middle">
                                 <a href="skype:@item.Skype?chat">
-                                    <img src="http://trungtamdongtien.com/images/skype.png" alt="@item.ContactName">
+                                    <img src="~/Content/images/khongxoa/skype.png" width="36" height="36" alt="@item.ContactName">
                                 </a>
                             </td>
                         </tr>

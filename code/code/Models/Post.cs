@@ -24,5 +24,7 @@ namespace code.Models
         public string Mail { get; set; }
         public string Author { get; set; }
         public string PhoneNumber { get; set; }
+        public Nullable<int> PostView { get; set; }
+        public string Image { get; set; }
     }
 }

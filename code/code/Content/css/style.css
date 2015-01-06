@@ -210,6 +210,51 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, input, form, fieldset, labe
         text-decoration: none;
     }
 
+.comment-box {
+    background-color: #fff;
+}
+
+.comment-box-heading{
+    padding: 5px;
+    font-size: 18px;
+    color: #fff;
+    background: #0054a3 !important;
+    text-align: center;
+    width:1070px;
+}
+
+.comment-box .input {
+    border: 1px #E9E9E9 solid;
+    azimuth: center;
+    width: 250px;
+    height: 25px;
+}
+
+.comment-box-form {
+    float: left;
+    width: 500px;
+    padding: 35px;
+}
+
+.comment-box-show {
+    float: left;
+    width: 470px;
+    padding: 5px;
+}
+.comment-box-img{
+    float:left;
+    width:100px;
+}
+.comment-box-content{
+    float:left;
+    width:370px;
+}
+.comment-box-content .title a{
+    color:#0054a3;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+}
 #footer {
     background-color: #d7dbe3;
     width: 1080px;

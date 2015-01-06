@@ -102,7 +102,11 @@ namespace code.Controllers
             }
             return PartialView();
         }
-
+        [ChildActionOnly]
+        public ActionResult comment()
+        {
+            return PartialView();
+        }
         [ChildActionOnly]
         public ActionResult footer()
         {

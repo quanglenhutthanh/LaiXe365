@@ -46,6 +46,8 @@
     <EntitySetMapping Name="Posts">
       <EntityTypeMapping TypeName="tru5a196_codeDBModel.Post">
         <MappingFragment StoreEntitySet="Posts">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="PostView" ColumnName="PostView" />
           <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
           <ScalarProperty Name="Author" ColumnName="Author" />
           <ScalarProperty Name="Mail" ColumnName="Mail" />

@@ -53,6 +53,8 @@
     <Property Name="Mail" Type="nvarchar" MaxLength="50" />
     <Property Name="Author" Type="nvarchar" MaxLength="100" />
     <Property Name="PhoneNumber" Type="nchar" MaxLength="11" />
+    <Property Name="PostView" Type="int" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityContainer Name="tru5a196_codeDBModelStoreContainer">
     <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />

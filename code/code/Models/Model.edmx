@@ -58,6 +58,8 @@
           <Property Name="Mail" Type="nvarchar" MaxLength="50" />
           <Property Name="Author" Type="nvarchar" MaxLength="100" />
           <Property Name="PhoneNumber" Type="nchar" MaxLength="11" />
+          <Property Name="PostView" Type="int" />
+          <Property Name="Image" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityContainer Name="tru5a196_codeDBModelStoreContainer">
           <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
@@ -130,6 +132,8 @@
           <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="PhoneNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="PostView" Type="Int32" />
+          <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -182,6 +186,8 @@
           <EntitySetMapping Name="Posts">
             <EntityTypeMapping TypeName="tru5a196_codeDBModel.Post">
               <MappingFragment StoreEntitySet="Posts">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="PostView" ColumnName="PostView" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
                 <ScalarProperty Name="Author" ColumnName="Author" />
                 <ScalarProperty Name="Mail" ColumnName="Mail" />

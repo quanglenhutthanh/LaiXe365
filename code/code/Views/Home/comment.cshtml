@@ -1,0 +1,55 @@
+﻿@model code.Models.Post
+<script src="~/Content/ckeditor/ckeditor.js"></script>
+
+@using (Html.BeginForm())
+{
+    <table cellpadding="0" cellspacing="5" border="0" class="tablelienhe">
+        <tbody>
+            <tr>
+
+                <td>@Html.TextBoxFor(model => model.Author, new { @class = "input", placeholder = "Họ và tên" })</td>
+            </tr>
+
+            <tr>
+
+                <td>@Html.TextBoxFor(model => model.Mail, new { @class = "input", placeholder = "Email" })</td>
+            </tr>
+
+
+            <tr>
+                <td>@Html.TextBoxFor(model => model.Title, new { @class = "input", placeholder = "Tiêu đề" })</td>
+            </tr>
+            <tr>
+                <td><input type="file" name="file">(giới hạn dung lượng 300kb)</td>
+            </tr>
+            <tr>
+               
+                <td>@Html.TextAreaFor(model => model.PostContent, new { @class = "input", id = "noidung", placeholder = "Nội dung" })</td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="button" type="button" value="Gửi" id="send" style="padding: 5px;">
+                    <input class="button" type="reset" value="Làm lại" style="padding: 5px;">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        CKEDITOR.editorConfig = function (config) {
+            config.toolbar = 'Basic';
+        };
+        var ckeditor = CKEDITOR.replace("noidung");
+        ckeditor.config.toolbar = [
+    { name: 'styles', items: ['Styles', 'Format'] },
+    { name: 'basicstyles', items: ['Bold', 'Italic', 'Strike', '-', 'RemoveFormat'] },
+    { name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Blockquote'] },
+    { name: 'links', items: ['Link', 'Unlink'] },
+        { name: 'tools', items: ['Maximize', '-', 'About'] },
+        ];
+        ckeditor.config.width = 500;
+        ckeditor.config.height = 150;
+    </script>
+
+}
+
+
