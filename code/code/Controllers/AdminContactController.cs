@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace code.Controllers
 {
-    public class AdminContactController : Controller
+    public class AdminContactController : admin_baseController
     {
         //
         // GET: /AdminContact/

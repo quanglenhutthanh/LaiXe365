@@ -152,7 +152,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, input, form, fieldset, labe
         .side ul li {
             border-bottom: 1px solid #BFCDF2;
             padding: 10px;
-            font-size: 12px;
+            font-size: 14px;
         }
 
             .side ul li a {
@@ -222,8 +222,12 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, input, form, fieldset, labe
     background: #0054a3 !important;
     text-align: center;
     width:1070px;
+    text-decoration:none;
 }
-
+.comment-box-heading a {
+    color: #fff;
+    text-decoration:none;
+}
 .comment-box .input {
     border: 1px #E9E9E9 solid;
     azimuth: center;

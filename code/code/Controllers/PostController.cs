@@ -25,5 +25,18 @@ namespace code.Controllers
             ViewBag.onePageOfSanPham = posts.ToPagedList(pageNumber, 10);
             return View();
         }
+
+        public ActionResult PostDetail(string alias)
+        {
+            Post post = db.Posts.SingleOrDefault(p => p.Alias.Equals(alias));
+            if (post != null)
+            {
+                post.PostView++;
+                db.Entry(post).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return View(post);
+            }
+            return View();
+        }
     }
 }

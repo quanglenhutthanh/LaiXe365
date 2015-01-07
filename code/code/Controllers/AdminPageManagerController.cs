@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace code.Controllers
 {
-    public class AdminPageManagerController : Controller
+    public class AdminPageManagerController : admin_baseController
     {
         //
         // GET: /AdminPageManager/

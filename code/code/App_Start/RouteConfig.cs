@@ -22,6 +22,11 @@ namespace code
            "y-kien-khach-hang/",
                new { controller = "post", action = "comment" }
            );
+            routes.MapRoute(
+           "post detail",
+           "bai-viet/{alias}",
+               new { controller = "post", action = "PostDetail" }
+           );
              routes.MapRoute(
             "admin",
             "admin/",

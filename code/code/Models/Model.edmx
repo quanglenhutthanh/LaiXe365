@@ -41,7 +41,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Yahoo" Type="nvarchar" MaxLength="100" />
           <Property Name="Skype" Type="nvarchar" MaxLength="100" />
-          <Property Name="PhoneNumber" Type="nchar" MaxLength="11" />
+          <Property Name="PhoneNumber" Type="nchar" MaxLength="100" />
           <Property Name="ContactName" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Posts">
@@ -108,7 +108,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Yahoo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Skype" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="PhoneNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="ContactName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">

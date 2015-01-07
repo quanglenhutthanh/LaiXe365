@@ -1,0 +1,13 @@
+﻿@model code.Models.Post
+@{
+    ViewBag.Title = "PostDetail";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div>
+    <h1>@Model.Title</h1>
+    <br />
+    <p>
+        @Html.Raw(Model.PostContent)
+    </p>
+</div>

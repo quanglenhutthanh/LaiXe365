@@ -1,0 +1,12 @@
+﻿@model IEnumerable<code.Models.Post>
+
+
+<ul class="menu">
+    <li class="heading">Học lái xe</li>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="~/bai-viet/@item.Alias" title="@item.Title">@item.Title</a>
+        </li>
+    }
+</ul>

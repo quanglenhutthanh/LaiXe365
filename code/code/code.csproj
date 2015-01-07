@@ -1113,6 +1113,7 @@
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\images\banner.png" />
+    <Content Include="Content\images\khongxoa\phone_icon.png" />
     <Content Include="Content\images\khongxoa\skype.png" />
     <Content Include="Content\images\slider\258991933036353_1000x300.png" />
     <Content Include="Content\images\slider\4522498930001030_1000x300.jpg" />
@@ -1292,6 +1293,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Post\Comment.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AdminPost\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\modulePost.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Post\PostDetail.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -85,6 +85,12 @@ namespace code.Controllers
         }
 
         [ChildActionOnly]
+        public ActionResult modulePost()
+        {
+            return PartialView(db.Posts.Where(p=>p.Type==1).Take(10).ToList());
+        }
+
+        [ChildActionOnly]
         public ActionResult slider()
         {
             try
@@ -135,6 +141,8 @@ namespace code.Controllers
                             file.SaveAs(path);
                             imageName = fileName.ToString();
                         }
+                        post.Alias = Utilities.EditString.BoDauTrenChuoi(post.Title);
+                        post.Image = imageName;
                         post.CreatedDate = System.DateTime.Now;
                         post.PostView = 1;
                         post.Type = 2;
