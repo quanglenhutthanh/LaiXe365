@@ -27,7 +27,6 @@ G:\Programming\current\LaiXe365\code\code\bin\System.Web.Razor.xml
 G:\Programming\current\LaiXe365\code\code\bin\System.Web.WebPages.xml
 G:\Programming\current\LaiXe365\code\code\bin\System.Web.WebPages.Deployment.xml
 G:\Programming\current\LaiXe365\code\code\bin\System.Web.WebPages.Razor.xml
-G:\Programming\current\LaiXe365\code\code\obj\Debug\code.csprojResolveAssemblyReference.cache
 G:\Programming\current\LaiXe365\code\code\obj\Debug\code.dll
 G:\Programming\current\LaiXe365\code\code\obj\Debug\code.pdb
 G:\Programming\current\LaiXe365\code\code\bin\CKFinder.dll
@@ -47,3 +46,4 @@ G:\Programming\current\LaiXe365\code\code\bin\PagedList.dll
 G:\Programming\current\LaiXe365\code\code\bin\PagedList.Mvc.dll
 G:\Programming\current\LaiXe365\code\code\bin\PagedList.xml
 G:\Programming\current\LaiXe365\code\code\bin\PagedList.Mvc.xml
+G:\Programming\current\LaiXe365\code\code\obj\Debug\code.csprojResolveAssemblyReference.cache

@@ -10,7 +10,17 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, input, form, fieldset, labe
     padding: 0;
     margin: 0;
 }
+#left {
 
+}
+
+#right {
+    right:0;
+
+margin:5px;
+height:40px;
+
+}
 #container {
     margin: 0 auto;
     width: 1080px;

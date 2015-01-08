@@ -16,12 +16,21 @@
             <div class="panel-body">
                 @using (Html.BeginForm("Edit", "AdminPost", FormMethod.Post, new { enctype = "multipart/form-data" }))
                 {
+                    @Html.HiddenFor(model=>model.Image)
+                    @Html.HiddenFor(model=>model.PostView)
+                    @Html.HiddenFor(model=>model.PhoneNumber)
+                    @Html.HiddenFor(model=>model.Mail)
+                    @Html.HiddenFor(model=>model.ID)
+                    @Html.HiddenFor(model=>model.Author)
+                    @Html.HiddenFor(model=>model.CreatedDate)
+                    @Html.HiddenFor(model=>model.Type)
                     <div class="form-group">
                         <label>Tiêu đề</label>
                         @Html.EditorFor(model => model.Title, new { @class = "form-control" })
                     </div>
                     <div class="form-group">
                         <label>Chọn ảnh đại diện</label>
+                        <img src="~/Content/images/baiviet/@Model.Image" width="250" height="250"/>
                         <input type="file" name="file">(giới hạn dung lượng 300kb)
                     </div>
                     <div class="form-group">

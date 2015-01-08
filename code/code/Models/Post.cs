@@ -20,7 +20,7 @@ namespace code.Models
         public string Description { get; set; }
         public string PostContent { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
-        public Nullable<byte> Type { get; set; }
+        public Nullable<short> Type { get; set; }
         public string Mail { get; set; }
         public string Author { get; set; }
         public string PhoneNumber { get; set; }

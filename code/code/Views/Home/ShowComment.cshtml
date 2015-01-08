@@ -11,7 +11,7 @@
             <div style="font-size:12px;">
                 <b>Người gửi:</b> @item.Author <br />
                 <b>Email:</b> @item.Mail <br />
-                @{string date = String.Format("{0:dd/MM/yyyy}", @item.CreatedDate);}
+                @{string date = String.Format("{0:dd/MM/yyyy hh:mm}", @item.CreatedDate);}
                 <b>Ngày gửi:</b> @date
             </div>
             

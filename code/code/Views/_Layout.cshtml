@@ -30,6 +30,23 @@
             js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+    
+
+    
+    <div style='float: left; width: 120px; padding-top: 100px; '>
+        <div style='position: fixed'>
+            <img src="~/Content/images/banner/left.jpg" height="400" width="120" />
+        </div>
+    </div>  
+    <div style='float: right; width: 120px; padding-top: 100px;'>
+        <div style='position: fixed'>
+            <img src="~/Content/images/banner/right.jpg" height="400" width="120" />
+        </div>
+    </div>
+        
+    
+   
+    
     <div id="container">
         <div id="header">
             @{Html.RenderAction("header", "Home");}
@@ -50,7 +67,23 @@
                     <ul class="menu">
                         <li class="heading">Thống kê truy cập</li>
                         <li>
+                            @{
+                                HttpApplicationState application = HttpContext.Current.ApplicationInstance.Application;
+                            }
+                            <table>
+                                <tr>
+                                    <td rowspan="2" width="30%">
+                                        <img src="~/Content/images/khongxoa/counting.png" />
 
+                                    </td>
+                                    <td>Đang truy cập: @application["DangTruyCap"].ToString()</td>
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>Đã truy cập: @application["DaTruyCap"].ToString()</td>
+                                </tr>
+                            </table>
                         </li>
 
                     </ul>

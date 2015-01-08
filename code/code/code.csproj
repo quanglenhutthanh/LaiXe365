@@ -1112,7 +1112,10 @@
     <Content Include="Content\ckfinder\translations.txt" />
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\style.css" />
-    <Content Include="Content\images\banner.png" />
+    <Content Include="Content\images\banner\banner.png" />
+    <Content Include="Content\images\banner\left.jpg" />
+    <Content Include="Content\images\banner\right.jpg" />
+    <Content Include="Content\images\khongxoa\counting.png" />
     <Content Include="Content\images\khongxoa\phone_icon.png" />
     <Content Include="Content\images\khongxoa\skype.png" />
     <Content Include="Content\images\slider\258991933036353_1000x300.png" />
@@ -1123,6 +1126,7 @@
     <Content Include="Content\js\marquee.js" />
     <Content Include="Content\js\script.js" />
     <Content Include="Content\css\PagedList.css" />
+    <Content Include="Files\Count_Visited.txt" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1138,7 +1142,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\images\baiviet\" />
-    <Folder Include="Files\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

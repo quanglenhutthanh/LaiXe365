@@ -1,13 +1,20 @@
 ﻿@model code.Models.Post
 @{
     ViewBag.Title = Model.Title;
-    string image = "http://trungtamlaixetphcm.com/Content/images/baiviet" + Model.Image;
+    string image = "http://trungtamlaixetphcm.com/Content/images/baiviet/" + Model.Image;
     ViewBag.Image = image;
     Layout = "~/Views/_Layout.cshtml";
 }
 
 <div>
     <h1>@Model.Title</h1>
+    <br />
+    @{string date = String.Format("{0:dd/MM/yyyy hh:mm}", @Model.CreatedDate);}
+    @if(Model.Type==2)
+    {
+        <label style="font-size:small">Người gửi bài: @Model.Author - Email: @Model.Mail</label><br />
+    }
+    <label style="font-size:small">Ngày gửi bài: @date</label>
     <br />
     <div class="fb-like" data-href="http://trungtamlaixetphcm.com/bai-viet/@Model.Alias" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     <br />
