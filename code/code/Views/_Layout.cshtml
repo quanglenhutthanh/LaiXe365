@@ -1,8 +1,15 @@
 ﻿<!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Website trung tâm dạy lái xe Thành Đạt">
+    <meta name="keywords" content="trung tam, day, dao tao, lai xe, o to, xe may, thanh dat" />
+    <meta property="og:title" content="@ViewBag.Title" />
+    <meta property="og:description" content="@ViewBag.Description" />
+    <meta property="og:image" content="@ViewBag.Image" />
     <link href="~/Content/css/style.css" rel="stylesheet" />
     @*<link href="~/Content/css/responsive.css" rel="stylesheet" media="screen and (max-width:900px)" />*@
     <script src="~/Content/js/jquery-1.11.1.min.js"></script>
@@ -14,6 +21,15 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     <div id="container">
         <div id="header">
             @{Html.RenderAction("header", "Home");}
@@ -34,9 +50,9 @@
                     <ul class="menu">
                         <li class="heading">Thống kê truy cập</li>
                         <li>
-                            
+
                         </li>
-                       
+
                     </ul>
                 </div>
             </div>
@@ -52,14 +68,14 @@
             <div class="comment-box-heading">
                 <label><a href="~/y-kien-khach-hang">Ý kiến - Đánh giá - Góp ý</a></label>
             </div>
-            
+
             <div class="comment-box-form">
-               @{Html.RenderAction("comment", "Home");}
+                @{Html.RenderAction("comment", "Home");}
             </div>
             @{Html.RenderAction("ShowComment", "Home");}
         </div>
         @{Html.RenderAction("footer", "Home");}
     </div>
-    
+
 </body>
 </html>

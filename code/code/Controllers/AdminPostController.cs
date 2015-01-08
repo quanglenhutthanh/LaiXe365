@@ -51,5 +51,29 @@ namespace code.Controllers
             }
             return View();
         }
+
+        public ActionResult Edit(int id = 0)
+        {
+            Post post = db.Posts.Find(id);
+            if (post == null)
+            {
+                return HttpNotFound();
+            }
+            return View(post);
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Edit(Post post)
+        {
+            if (ModelState.IsValid)
+            {
+                post.Alias = Utilities.EditString.BoDauTrenChuoi(post.Title);
+                db.Entry(post).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(post);
+        }
     }
 }
