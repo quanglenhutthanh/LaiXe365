@@ -2,11 +2,11 @@
 
 
 <ul class="menu">
-    <li class="heading">Học lái xe</li>
+    <li class="heading"><a href="~/bai-viet" style="color:white;">Học lái xe</a></li>
     @foreach (var item in Model)
     {
         <li>
-            <a href="~/bai-viet/@item.Alias" title="@item.Title">@item.Title</a>
+            <a style="text-decoration:none;" href="~/bai-viet/@item.Alias" title="@item.Title">@item.Title</a>
         </li>
     }
 </ul>

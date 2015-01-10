@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<code.Models.Post>
 @{
-    ViewBag.Title = "Comment";
+    ViewBag.Title = "Ý kiến khách hàng";
     Layout = "~/Views/_Layout.cshtml";
 }
 <link href="~/Content/css/PagedList.css" rel="stylesheet" />
@@ -11,15 +11,18 @@
 @foreach(var item in posts)
 {
     <div id="box-item" class="clearfix">
-    <div id="box-item-image">
-        <img src="User_icon.png" alt="no image" />
+        <div id="box-item-image">
+            <img src="~/Content/images/baiviet/@item.Image" alt="no image" />
+        </div>
+        <div id="box-item-content">
+            <h2>
+                <a href="~/bai-viet/@item.Alias">@item.Title</a>
+            </h2>
+            <p>
+                @Html.Raw(item.PostContent)
+            </p>
+        </div>
+        
     </div>
-    <div id="box-item-content">
-        <h2>@item.Title</h2>
-        <p>
-            @Html.Raw(item.PostContent)
-        </p>
-    </div>
-</div>
 }
 @Html.PagedListPager((IPagedList)ViewBag.onePageOfSanPham, page => Url.Action("Comment", new { page}), PagedListRenderOptions.OnlyShowFivePagesAtATime)

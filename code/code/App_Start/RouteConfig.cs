@@ -13,6 +13,11 @@ namespace code
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
+            "Post",
+            "bai-viet/",
+                new { controller = "Post", action = "Index" }
+            );
+            routes.MapRoute(
             "Page by name",
             "{title}.html/",
                 new { controller = "Home", action = "PageByTitle" }

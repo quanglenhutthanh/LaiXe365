@@ -13,8 +13,11 @@ namespace code.Controllers
         //
         // GET: /Post/
         DBEntities db = new DBEntities();
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
+            var posts = db.Posts.Where(p => p.Type == 1).ToList();
+            var pageNumber = page ?? 1;
+            ViewBag.onePageOfSanPham = posts.ToPagedList(pageNumber, 10);
             return View();
         }
 

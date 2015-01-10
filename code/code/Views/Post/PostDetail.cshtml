@@ -19,7 +19,13 @@
     <div class="fb-like" data-href="http://trungtamlaixetphcm.com/bai-viet/@Model.Alias" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     <br />
     <br />
-    <p>
-        @Html.Raw(Model.PostContent)
-    </p>
+    <div style="min-height:400px;">
+        <p>
+            @Html.Raw(Model.PostContent)
+        </p>
+    </div>
+    
+    <div style="margin-top:40px;">
+        <div class="fb-comments" data-href="http://trungtamlaixetphcm.com/bai-viet/@Model.Alias" data-numposts="10" data-colorscheme="light"></div>
+    </div>
 </div>
