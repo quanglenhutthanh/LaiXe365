@@ -34,6 +34,9 @@ namespace code.Controllers
             Utilities.File.WriteFile(headerFilePath, txtHeader);
             Utilities.File.WriteFile(marqueeFilePath, marquee);
             Utilities.File.WriteFile(footerFilePath, txtFooter);
+            ViewBag.Header = txtHeader;
+            ViewBag.Footer = txtFooter;
+            ViewBag.Marquee = marquee;
             return View();
         }
 

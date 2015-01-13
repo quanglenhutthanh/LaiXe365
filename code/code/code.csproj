@@ -1115,6 +1115,7 @@
     <Content Include="Content\images\banner\banner.png" />
     <Content Include="Content\images\banner\left.jpg" />
     <Content Include="Content\images\banner\right.jpg" />
+    <Content Include="Content\images\chính nhất.png" />
     <Content Include="Content\images\khongxoa\counting.png" />
     <Content Include="Content\images\khongxoa\phone_icon.png" />
     <Content Include="Content\images\khongxoa\skype.png" />
