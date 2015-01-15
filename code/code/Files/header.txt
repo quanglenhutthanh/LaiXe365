@@ -1,1 +1,1 @@
-<p style="text-align:center"><input alt="" src="/Content/images/ch%C3%ADnh%20nh%E1%BA%A5t.png" style="height: 195px; width: 1080px;" type="image" /></p>
+<p style="text-align:center"><input alt="" src="/Content/images/totnhat%201.png" style="height: 200px; width: 1080px;" type="image" /></p>
