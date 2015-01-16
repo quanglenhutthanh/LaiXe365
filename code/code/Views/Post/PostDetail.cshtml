@@ -2,6 +2,11 @@
 @{
     ViewBag.Title = Model.Title;
     string image = "http://trungtamlaixetphcm.com/Content/images/baiviet/" + Model.Image;
+    if(Model.Image==null)
+    {
+        image = "http://trungtamlaixetphcm.com/Content/images/khongxoa/tot%20nhat_.png";
+    }
+    
     ViewBag.Image = image;
     Layout = "~/Views/_Layout.cshtml";
 }
