@@ -79,7 +79,7 @@
                     @{Html.RenderAction("modulePost", "Home");}
                     <br />
                     <ul class="menu">
-                        <li class="heading">Thống kê truy cập</li>
+                        @*<li class="heading">Thống kê truy cập</li>
                         <li>
                             @{
                                 HttpApplicationState application = HttpContext.Current.ApplicationInstance.Application;
@@ -98,8 +98,12 @@
                                     <td>Đã truy cập: @application["DaTruyCap"].ToString()</td>
                                 </tr>
                             </table>
+                        </li>*@
+                        <li class="heading">Kết nối với chúng tôi</li>
+                        <li style="text-align:center;">
+                            <div class="fb-like-box" data-href="https://www.facebook.com/trungtamlaixetphcm" data-width="240" data-height="262" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
                         </li>
-
+                        
                     </ul>
                 </div>
             </div>
